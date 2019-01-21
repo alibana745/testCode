@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TestCode</string>
+    <string name="login_user_google">Login Google</string>
+</resources>
