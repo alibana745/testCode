@@ -5,18 +5,18 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.ali.testcode.Location
+import com.ali.testcode.TouristDestination
 import com.ali.testcode.R
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_dashboard.view.*
 
-class AdapterDashboard (val mLocations: MutableList<Location>,
+class AdapterDashboard (val mTouristDestinations: MutableList<TouristDestination>,
                         val mContext :Context,
                         val mListener:Listener)
     : RecyclerView.Adapter<AdapterDashboard.ViewHolder>() {
 
     interface Listener{
-        fun clickListener(location: Location)
+        fun clickListener(touristDestination: TouristDestination)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): ViewHolder {
@@ -25,11 +25,11 @@ class AdapterDashboard (val mLocations: MutableList<Location>,
     }
 
     override fun getItemCount(): Int {
-        return mLocations.size
+        return mTouristDestinations.size
     }
 
     override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
-        val location = mLocations[p1]
+        val location = mTouristDestinations[p1]
         p0.mTvTitle.text = location.title
         p0.mTvText.text = location.detail
         Glide.with(mContext).load(location.urlImage).into(p0.mImvImg)
@@ -44,9 +44,9 @@ class AdapterDashboard (val mLocations: MutableList<Location>,
         val mTvText = item.text!!
     }
 
-    fun dataChange(locations:MutableList<Location>){
-        mLocations.clear()
-        mLocations.addAll(locations)
+    fun dataChange(touristDestinations:MutableList<TouristDestination>){
+        mTouristDestinations.clear()
+        mTouristDestinations.addAll(touristDestinations)
         notifyDataSetChanged()
     }
 }

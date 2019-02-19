@@ -1,14 +1,14 @@
 package com.ali.testcode.detailLocation
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
-import com.ali.testcode.Location
+import com.ali.testcode.BaseActivity
+import com.ali.testcode.TouristDestination
 import com.ali.testcode.R
 import com.bumptech.glide.Glide
 
-class ActivityDetailLocation : AppCompatActivity() {
+class ActivityDetailLocation : BaseActivity() {
 
     private lateinit var mTvTitle:TextView
     private lateinit var mTvDetail:TextView
@@ -30,7 +30,8 @@ class ActivityDetailLocation : AppCompatActivity() {
     }
 
     private fun initData(){
-        val location = intent.extras.getSerializable("Location")as Location
+        val location = intent.extras.getSerializable("TouristDestination")as TouristDestination
+        setToolbar(R.id.toolbar, location.title)
         mTvTitle.text = location.title
         mTvAddress.text = location.address
         mTvDetail.text = location.detail

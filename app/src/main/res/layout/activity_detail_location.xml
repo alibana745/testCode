@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".detailLocation.ActivityDetailLocation">
 
+    <include
+        android:id="@+id/toolbarId"
+        layout="@layout/master_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/title"
         android:layout_width="0dp"
@@ -14,7 +21,7 @@
         android:textStyle="bold"
         android:textSize="20sp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarId"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
 

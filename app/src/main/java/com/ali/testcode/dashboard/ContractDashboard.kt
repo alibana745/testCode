@@ -1,6 +1,6 @@
 package com.ali.testcode.dashboard
 
-import com.ali.testcode.Location
+import com.ali.testcode.TouristDestination
 
 interface ContractDashboard {
     interface Presenter{
@@ -8,6 +8,7 @@ interface ContractDashboard {
     }
 
     interface View {
-        fun setData(Locations:MutableList<Location>)
+        fun setData(touristDestinations:MutableList<TouristDestination>)
+        fun progressBar(status:Boolean)
     }
 }

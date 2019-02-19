@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">TestCode</string>
     <string name="login_user_google">Login Google</string>
+    <string name="alert_sign_out">Are you want Sign Out?</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="my_location">My Location</string>
+    <string name="google_map_key">AIzaSyAJFg8stjsJgvxoKFA5ZX4NaFCvN7glz_g</string>
 </resources>
